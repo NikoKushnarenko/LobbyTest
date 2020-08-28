@@ -6,7 +6,7 @@ using Orleans;
 
 namespace GrainInterfaces
 {
-    public interface IReceiveMessage : IGrainObserver
+    public interface IRoom : IGrainWithIntegerKey
     {
         Task ReceiveMessage(string message);
     }

@@ -30,9 +30,7 @@ namespace Soli
                 {
                     options.ClusterId = "dev";
                     options.ServiceId = "OrleansBasics";
-                })
-                .ConfigureApplicationParts(parts =>
-                    parts.AddApplicationPart(typeof(SubscriptionManagerGrain).Assembly).WithReferences());
+                });
 
             var host = builder.Build();
             await host.StartAsync();
